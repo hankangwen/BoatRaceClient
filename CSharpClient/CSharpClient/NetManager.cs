@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
-using BoatRacePb;
+using BoatRace;
 
 namespace CSharpClient
 {

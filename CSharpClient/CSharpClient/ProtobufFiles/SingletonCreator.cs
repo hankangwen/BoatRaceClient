@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace CSharpClient
+namespace BoatRace
 {
     public interface ISingleton
     {
