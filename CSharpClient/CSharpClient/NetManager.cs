@@ -9,8 +9,12 @@ namespace CSharpClient
     {
         private Socket _socket;
         private ByteArray _readBuff;
-        
-        NetManager() { }
+        private ProtobufUtil _pbUtil;
+
+        NetManager()
+        {
+            _pbUtil = ProtobufUtil.Instance;
+        }
 
         public void Send(byte[] sendBytes)
         {

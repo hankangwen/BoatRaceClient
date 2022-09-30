@@ -35,6 +35,17 @@ namespace BoatRace
             }
         }
 
+        public object BytesToObject(byte[] bytesData, Type type)
+        {
+            using (MemoryStream memory = new MemoryStream(bytesData))
+            {
+                var result = Serializer.Deserialize(type, memory);
+                return result;
+                // T result = Serializer.Deserialize(memory);
+                // return result;
+            }
+        }
+        
         public T BytesToObject<T>(byte[] bytesData)
         {
             if (bytesData.Length == 0)
